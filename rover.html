@@ -58,26 +58,25 @@
         </ul>
         <video src="videos/Arm_05-19.mp4" controls muted height="250px"></video>
         
-        <h2 onclick="toggleSection('arm-section')">Conception et fabrication du bras <span id="arrow">&#9660;</span></h2>
+        <p onclick="toggleSection('arm-section')" style="color: royalblue">Plus d'information sur la conception du bras <span id="arrow">&#9660;</span></p>
         <div id="arm-section">
             <h4>Premier joint: Joint linéaire</h4>
-        <p>Ce joint est composé de deux rails linéaires ainsi qu'une tige sans-fin et permet de bouger le bras lattéralement en x. Le but de ce joint est de simplifier les déplacements à chaque joint pour opérer des boutons sur un panneau. Le contrôle des joints 3 et 4 (épaule et coude) est donc faite en 2D, soit sur le plan du panneau en face ainsi que en hauteur. Le déplacement gauche droite linéaire n'a pas besoin d'être calculé dans le contrôle et est entièrement effectué par ce joint. Les rails linéaires permettent une excellente robustesse en torsion au premier joint, tout en permettant un mouvement fluide et précis. Le rail linéaire permet d'avoir une grande précision et répétabilité sans offrir de <em>backlash</em> et sans être <em>backdrivable</em></p>
-        
-        <h4>Deuxième joint: Rotation de la base</h4>
-        <p>La conception de cet assemblage a été faite avec des roulements à billes réutilisés d'un autre projet. Le petit moteur est capable de produire 18Nm de torque et offre une réduction de 7:1. Le deuxième joint est donc capable de tourner à 2,75 RPM tout en exercant un maximum de 125Nm.</p>
-        
-        <h4>Troisième joint: Épaule</h4>
-        <p>Ce joint a été repensé et refabriqué plusieurs fois en raison de la complexité technique. Au bout du bras de 1.5m, je me suis mis comme requis de pouvoir soulever 10kg plus le poid du bras, donc 15kg au total au maximum. Le premier joint doit donc développer 225Nm de torque plus un facteur de sécurité, donc un peu plus de 250Nm. Le dernier concept relie un moteur DC à brosse de 150W à une boîte d'engrenage à vis sans fin (worm gear) avec un ratio de 40:1. En sortie, le <em>gearbox</em> est capable d'appliquer 260Nm de torque à 3 RPM. </p>
+            <p>Ce joint est composé de deux rails linéaires ainsi qu'une tige sans-fin et permet de bouger le bras lattéralement en x. Le but de ce joint est de simplifier les déplacements à chaque joint pour opérer des boutons sur un panneau. Le contrôle des joints 3 et 4 (épaule et coude) est donc faite en 2D, soit sur le plan du panneau en face ainsi que en hauteur. Le déplacement gauche droite linéaire n'a pas besoin d'être calculé dans le contrôle et est entièrement effectué par ce joint. Les rails linéaires permettent une excellente robustesse en torsion au premier joint, tout en permettant un mouvement fluide et précis. Le rail linéaire permet d'avoir une grande précision et répétabilité sans offrir de <em>backlash</em> et sans être <em>backdrivable</em></p>
+            
+            <h4>Deuxième joint: Rotation de la base</h4>
+            <p>La conception de cet assemblage a été faite avec des roulements à billes réutilisés d'un autre projet. Le petit moteur est capable de produire 18Nm de torque et offre une réduction de 7:1. Le deuxième joint est donc capable de tourner à 2,75 RPM tout en exercant un maximum de 125Nm.</p>
+            
+            <h4>Troisième joint: Épaule</h4>
+            <p>Ce joint a été repensé et refabriqué plusieurs fois en raison de la complexité technique. Au bout du bras de 1.5m, je me suis mis comme requis de pouvoir soulever 10kg plus le poid du bras, donc 15kg au total au maximum. Le premier joint doit donc développer 225Nm de torque plus un facteur de sécurité, donc un peu plus de 250Nm. Le dernier concept relie un moteur DC à brosse de 150W à une boîte d'engrenage à vis sans fin (worm gear) avec un ratio de 40:1. En sortie, le <em>gearbox</em> est capable d'appliquer 260Nm de torque à 3 RPM. </p>
 
-        <h4>Quatrième joint: Coude</h4>
-        <p>Du même ordre d'idée que le troisième joint, ce joint doit pouvoir tourner à 3 RPM et développer 150Nm, mais plus souvent. J'ai donc fait la conception d'un joint à vis sans-fin avec des pièces libre marché. </p>
+            <h4>Quatrième joint: Coude</h4>
+            <p>Du même ordre d'idée que le troisième joint, ce joint doit pouvoir tourner à 3 RPM et développer 150Nm, mais plus souvent. J'ai donc fait la conception d'un joint à vis sans-fin avec des pièces libre marché. </p>
 
-        <h4>5e et 6e joint: Poignet</h4>
-        <p>Le joint du poignet est un joint différentiel. Ce mécansime permet de déporter un peu le poid des moteurs tout en offrant un maximum de puissance des deux moteurs en même temps en rotation. </p>
+            <h4>5e et 6e joint: Poignet</h4>
+            <p>Le joint du poignet est un joint différentiel. Ce mécansime permet de déporter un peu le poid des moteurs tout en offrant un maximum de puissance des deux moteurs en même temps en rotation. </p>
 
-        <h4>Pince</h4>
-        <p>La pince est un mécanisme à deux doigts. Les doigts sont actionnés par un servomoteur et sont capables de soulever 10kg. Les doigts sont munis de capteurs de force pour permettre une meilleure précision lors de la manipulation d'objets.</p>
-        
+            <h4>Pince</h4>
+            <p>La pince est un mécanisme à deux doigts. Les doigts sont actionnés par un servomoteur et sont capables de soulever 10kg. Les doigts sont munis de capteurs de force pour permettre une meilleure précision lors de la manipulation d'objets.</p>
         </div>
 
         
