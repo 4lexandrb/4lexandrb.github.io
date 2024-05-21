@@ -120,3 +120,21 @@ footer a {
 #arm-section {
     display: block;
 }
+
+.quote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #333;
+    background-color: #fff;
+    margin-top: 1em;
+}
+
+.media-container {
+    display: grid;
+    width: 90%;
+    height: 300px;
+    margin-top: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px; /* Increase the gap value */
+    padding: 2em;
+}

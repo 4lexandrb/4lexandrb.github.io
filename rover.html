@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet 1 - Mon Portfolio</title>
+    <title>Rover</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <h1>Rover - Robotique UdeS</h1>
+        <br>
+        <br>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -58,7 +60,7 @@
         </ul>
         <video src="videos/Arm_05-19.mp4" controls muted height="250px"></video>
         
-        <p onclick="toggleSection('arm-section')">Plus d'information sur la conception du bras<span id="arrow">&#9658;</span></p>
+        <p onclick="toggleSection('arm-section')" style="color: royalblue;">Plus d'information sur la conception du bras<span id="arrow">&#9658;</span></p>
         <div id="arm-section" style="display: none;">
             <h4>Premier joint: Joint linéaire</h4>
             <p>Ce joint est composé de deux rails linéaires ainsi qu'une tige sans-fin et permet de bouger le bras lattéralement en x. Le but de ce joint est de simplifier les déplacements à chaque joint pour opérer des boutons sur un panneau. Le contrôle des joints 3 et 4 (épaule et coude) est donc faite en 2D, soit sur le plan du panneau en face ainsi que en hauteur. Le déplacement gauche droite linéaire n'a pas besoin d'être calculé dans le contrôle et est entièrement effectué par ce joint. Les rails linéaires permettent une excellente robustesse en torsion au premier joint, tout en permettant un mouvement fluide et précis. Le rail linéaire permet d'avoir une grande précision et répétabilité sans offrir de <em>backlash</em> et sans être <em>backdrivable</em></p>
@@ -74,6 +76,7 @@
 
             <h4>5e et 6e joint: Poignet</h4>
             <p>Le joint du poignet est un joint différentiel. Ce mécansime permet de déporter un peu le poid des moteurs tout en offrant un maximum de puissance des deux moteurs en même temps en rotation. </p>
+            <img src="images/poignet_Diff.jpg" height="250px" alt="Poignet du bras">
             <video src="videos/poignet_full_show.mp4" height="250px">Poignet</video>
 
             <h4>Pince</h4>
@@ -85,6 +88,13 @@
         <img src="images/circ2023_terrain.jpg" height="300px" alt="Rover CIRC2023 Tout terrain">
         <p>Assurer une bonne traction permet de naviguer tous les terrains ainsi que battre les autres équipes au tir à la corde! </p>
         <video src="videos/souk_a_corde_poly.mp4" height="300px" controls>Tir à la corde</video>
+
+        <h3>Programmation et schéma électrique du module science</h3>
+        <p>Le module science est un module qui permet de faire des analyses sur le terrain. Il est équipé de plusieurs capteurs et d'une caméra pour permettre aux opérateurs de faire des analyses à distance. J'ai été en charge de la programmation et du schéma électrique de ce module pour aider l'équipe qui développe la partie mécanique. J'ai programmé la communication CANBus, l'intégration des capteur de fin de course et la programmation des moteurs. </p>
+        <img src="images/schema_elec_science.jpg" height="300px" alt="Module science">
+
+        <h3>Conception et fabrication de pièces diverses</h3>
+        <p>En plus de mes tâches principales, j'ai également été en charge de la conception et de la fabrication de plusieurs pièces pour le Rover. J'ai utilisé une imprimante 3D pour fabriquer des pièces en plastique et j'ai utilisé un tour CNC pour fabriquer des pièces en aluminium. Plusieurs de mes réalisations sont les boîtiers protecteurs de chaque circuits imprimés, un support à caméra, support à antennes et plus encore. </p>
     </main>
 
     <footer>
