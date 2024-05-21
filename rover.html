@@ -58,7 +58,7 @@
         </ul>
         <video src="videos/Arm_05-19.mp4" controls muted height="250px"></video>
         
-        <p onclick="toggleSection('arm-section')" style="color: royalblue">Plus d'information sur la conception du bras <span id="arrow">&#9660;</span></p>
+        <p onclick="toggleSection('arm-section')" style="color: royalblue">Plus d'information sur la conception du bras <span id="arrow">&#9658;</span></p>
         <div id="arm-section">
             <h4>Premier joint: Joint linéaire</h4>
             <p>Ce joint est composé de deux rails linéaires ainsi qu'une tige sans-fin et permet de bouger le bras lattéralement en x. Le but de ce joint est de simplifier les déplacements à chaque joint pour opérer des boutons sur un panneau. Le contrôle des joints 3 et 4 (épaule et coude) est donc faite en 2D, soit sur le plan du panneau en face ainsi que en hauteur. Le déplacement gauche droite linéaire n'a pas besoin d'être calculé dans le contrôle et est entièrement effectué par ce joint. Les rails linéaires permettent une excellente robustesse en torsion au premier joint, tout en permettant un mouvement fluide et précis. Le rail linéaire permet d'avoir une grande précision et répétabilité sans offrir de <em>backlash</em> et sans être <em>backdrivable</em></p>
