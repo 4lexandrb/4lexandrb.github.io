@@ -77,7 +77,6 @@ main {
     align-items: center;
     justify-content: center;
 }
-}
 
 .project-card h3 {
     margin: 0;
@@ -119,5 +118,5 @@ footer a {
 }
 
 #arm-section {
-    display: none;
+    display: block;
 }
