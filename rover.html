@@ -16,6 +16,7 @@
                 <li><a href="machine2024.html">Machine JDG 2024</a></li>
                 <li><a href="machine2023.html">Machine JDG 2023</a></li>
                 <li><a href="imprimantecorexy.html">Imprimante 3D CoreXY</a></li>
+                <li><a href="competitions.html">Compétitions</a></li>
             </ul>
         </nav>
     </header>
@@ -30,14 +31,15 @@
             <li>4 roues motrices</li>
             <li>Bras 5 axes</li>
             <li>Module Science</li>
+            <li>Masse totale de moins de 50kg</li>
         </ul>
         <p>Le Rover a été conçu par l'équipe de Robotique UdeS pour participer à la compétition University Rover Challenge ainsi que la Canadian International Rover Competition.</p>
-        <video src="videos/Rover_conduite_CRQRC.mp4" controls muted></video>
+        <video src="videos/Rover_conduite_CRQRC.mp4" controls muted height="250px"></video>
         
         
         <h2>Mon rôle:</h2>
         <ul>
-            <li>Co-Direction avec Philippe Michaud</li>
+            <li>Co-Direction avec <a href="pmichaud29.github.io">Philippe Michaud</a></li>
             <li>Conception et fabrication du bras</li>
             <li>Conception du chassîs et de la suspension</li>
             <li>Programmation et schéma électrique du module science</li>
@@ -52,10 +54,33 @@
             <li>Mouvement dans au moins 5 axes</li>
             <li>Capacité de soulever 10kg</li>
             <li>Répétabilité de moins de 10mm</li>
+            <li>Le plus léger possible</li>
         </ul>
-        <video src="videos/Arm_05-19.mp4" controls muted></video>
+        <video src="videos/Arm_05-19.mp4" controls muted height="250px"></video>
+        
+        <h2 onclick="toggleSection('arm-section')">Conception et fabrication du bras <span id="arrow">&#9660;</span></h2>
+        <div id="arm-section">
+            <h4>Premier joint: Joint linéaire</h4>
+        <p>Ce joint est composé de deux rails linéaires ainsi qu'une tige sans-fin et permet de bouger le bras lattéralement en x. Le but de ce joint est de simplifier les déplacements à chaque joint pour opérer des boutons sur un panneau. Le contrôle des joints 3 et 4 (épaule et coude) est donc faite en 2D, soit sur le plan du panneau en face ainsi que en hauteur. Le déplacement gauche droite linéaire n'a pas besoin d'être calculé dans le contrôle et est entièrement effectué par ce joint. Les rails linéaires permettent une excellente robustesse en torsion au premier joint, tout en permettant un mouvement fluide et précis. Le rail linéaire permet d'avoir une grande précision et répétabilité sans offrir de <em>backlash</em> et sans être <em>backdrivable</em></p>
+        
+        <h4>Deuxième joint: Rotation de la base</h4>
+        <p>La conception de cet assemblage a été faite avec des roulements à billes réutilisés d'un autre projet. Le petit moteur est capable de produire 18Nm de torque et offre une réduction de 7:1. Le deuxième joint est donc capable de tourner à 2,75 RPM tout en exercant un maximum de 125Nm.</p>
+        
+        <h4>Troisième joint: Épaule</h4>
+        <p>Ce joint a été repensé et refabriqué plusieurs fois en raison de la complexité technique. Au bout du bras de 1.5m, je me suis mis comme requis de pouvoir soulever 10kg plus le poid du bras, donc 15kg au total au maximum. Le premier joint doit donc développer 225Nm de torque plus un facteur de sécurité, donc un peu plus de 250Nm. Le dernier concept relie un moteur DC à brosse de 150W à une boîte d'engrenage à vis sans fin (worm gear) avec un ratio de 40:1. En sortie, le <em>gearbox</em> est capable d'appliquer 260Nm de torque à 3 RPM. </p>
 
+        <h4>Quatrième joint: Coude</h4>
+        <p>Du même ordre d'idée que le troisième joint, ce joint doit pouvoir tourner à 3 RPM et développer 150Nm, mais plus souvent. J'ai donc fait la conception d'un joint à vis sans-fin avec des pièces libre marché. </p>
 
+        <h4>5e et 6e joint: Poignet</h4>
+        <p>Le joint du poignet est un joint différentiel. Ce mécansime permet de déporter un peu le poid des moteurs tout en offrant un maximum de puissance des deux moteurs en même temps en rotation. </p>
+
+        <h4>Pince</h4>
+        <p>La pince est un mécanisme à deux doigts. Les doigts sont actionnés par un servomoteur et sont capables de soulever 10kg. Les doigts sont munis de capteurs de force pour permettre une meilleure précision lors de la manipulation d'objets.</p>
+        
+        </div>
+
+        
     </main>
 
 
@@ -64,3 +89,18 @@
     </footer>
 </body>
 </html>
+
+<script>
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        var arrow = document.getElementById("arrow");
+
+        if (section.style.display === "none") {
+            section.style.display = "block";
+            arrow.innerHTML = "&#9660;"; // Down arrow
+        } else {
+            section.style.display = "none";
+            arrow.innerHTML = "&#9658;"; // Right arrow
+        }
+    }
+</script>

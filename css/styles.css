@@ -117,3 +117,7 @@ footer a {
 .language-switcher button:hover {
     background-color: #50C878;
 }
+
+#arm-section {
+    display: none;
+}
