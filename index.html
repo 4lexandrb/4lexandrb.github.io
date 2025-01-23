@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
 <body>
     <header>
+        <div class="language-switch"
+            style="display: inline-block; float: right; padding: 10px; background-color: darkgreen; border: none; border-radius: 5px; margin: 5px;">
+            <a href="index.html" style="color: white; text-decoration: none; font-weight: bold; padding: 5px;">FR</a> |
+            <a href="index_en.html" style="color: white; text-decoration: none; font-weight: bold; padding: 5px;">EN</a>
+        </div>
         <h1>Portfolio de Alexandre Baril</h1>
         <br>
         <br>
@@ -15,60 +23,64 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="rover.html">Rover</a></li>
-                <li><a href="machine2024.html">Machine JDG 2024</a></li>
-                <li><a href="machine2023.html">Machine JDG 2023</a></li>
-                <li><a href="imprimantecorexy.html">Imprimante 3D CoreXY</a></li>
+                <li><a href="machineJDG.html">Machines Jeux de Génie</a></li>
                 <li><a href="competitions.html">Compétitions</a></li>
+                <li><a href="imprimantecorexy.html">Projets personnels</a></li>
+                <li class="dropdown" style="border: none;">
+                    <a href="#" class="dropbtn" style="color: white; text-decoration: none; font-weight: bold; padding: 5px;">CV</a>
+                    <div class="dropdown-content">
+                        <a href="pdf/CV-AlexandreBaril.pdf" download>CV FR</a>
+                        <a href="pdf/CV-AlexandreBaril_EN.pdf" download>CV EN</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
+   
     <main>
 
         <div class="project-grid">
             <div class="project-card">
-                <a href="pdf/CV-AlexandreBaril.pdf" download>
-                    <img src="images/cvPreview.png" alt="Preview Image">
-                    <div class="project-footer">
-                        <h3>CV</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="project-card">
                 <a href="rover.html">
-                    <img src="images/Rover_Science_CRQRC.jpg" alt="Rover">
-                    <div class="project-footer">
-                        <h3>Rover</h3>
-                    </div>
+                <img src="images/Rover_Science_CRQRC.jpg" alt="Rover">
+                <div class="project-footer">
+                    <h3>Rover</h3>
+                </div>
                 </a>
             </div>
             <div class="project-card">
-                <a href="machine2024.html">
-                    <img src="images/Machine2024-3D.png" alt="machine2024">
-                    <div class="project-footer">
-                        <h3>Machine Jeux de Génie 2024</h3>
-                    </div>
+                <a href="machineJDG.html">
+                <img src="images/machine2023_deux_robot.jpg" alt="MachinesJDG">
+                <div class="project-footer">
+                    <h3>Jeux de Génie - Machine</h3>
+                </div>
                 </a>
             </div>
             <div class="project-card">
                 <a href="machine2023.html">
-                    <img src="images/machine2023_deux_robot.jpg" alt="machine2023">
-                    <div class="project-footer">
-                        <h3>Machine Jeux de Génie 2023</h3>
-                    </div>
+                <img src="images/machine2023_deux_robot.jpg" alt="machine2023">
+                <div class="project-footer">
+                    <h3>Compétitions d'ingénierie</h3>
+                </div>
                 </a>
             </div>
             <div class="project-card">
                 <a href="imprimantecorexy.html">
-                    <img src="images/corexy_print_closeup.png" alt="imprimantecorexy">
-                    <div class="project-footer">
-                        <h3>Imprimante 3D CoreXY</h3>
-                    </div>
+                <img src="images/corexy_print_closeup.png" alt="imprimantecorexy">
+                <div class="project-footer">
+                    <h3>Imprimante 3D CoreXY</h3>
+                </div>
                 </a>
             </div>
         </div>
+
+        </div>
     </main>
+    
     <footer>
         <p>Contactez-moi à <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
     </footer>
+
 </body>
+
 </html>
