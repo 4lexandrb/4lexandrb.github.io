@@ -7,25 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="language-switch" style="display: inline-block; float: right; padding: 10px; background-color: darkgreen; border: NONE; border-radius: 5px; margin: 5px;">
-            <a href="competitions.html" style="color: white; text-decoration: none; font-weight: bold; padding: 5px;">FR</a> | 
-            <a href="competitions_en.html" style="color: white; text-decoration: none; font-weight: bold; padding: 5px;">EN</a>
-        </div>
-        <h1>Portfolio de Alexandre Baril</h1>
-        <br>
-        <br>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="rover.html">Rover</a></li>
-                <li><a href="machine2024.html">Machine JDG 2024</a></li>
-                <li><a href="machine2023.html">Machine JDG 2023</a></li>
-                <li><a href="imprimantecorexy.html">Imprimante 3D CoreXY</a></li>
-                <li><a href="competitions.html">Compétitions</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
 
     <main>
@@ -39,5 +21,13 @@
     <footer>
         <p>Contactez-moi à <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
     </footer>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
