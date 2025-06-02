@@ -85,9 +85,11 @@ main {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 footer {
     text-align: center;
@@ -182,4 +184,31 @@ footer a {
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.accordion-toggle {
+    color: #50C878;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1em;
+    display: inline-block;
+}
+.accordion-content {
+    display: none;
+    padding: 1em 0;
+}
+.accordion-content.open {
+    display: block;
+    animation: fadeIn 0.3s ease;
 }

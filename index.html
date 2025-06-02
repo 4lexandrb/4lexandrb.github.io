@@ -10,7 +10,7 @@
 
 
 <body>
-    <header>
+    <!-- <header>
         <div class="language-switch"
             style="display: inline-block; float: right; padding: 10px; background-color: darkgreen; border: none; border-radius: 5px; margin: 5px;">
             <a href="index.html" style="color: white; text-decoration: none; font-weight: bold; padding: 5px;">FR</a> |
@@ -35,12 +35,14 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </header> -->
    
+    <div id="header-placeholder"></div>
+
     <main>
 
         <div class="project-grid">
-            <div class="project-card">
+            <div class="project-card fade-in">
                 <a href="rover.html">
                 <img src="images/Rover_Science_CRQRC.jpg" alt="Rover">
                 <div class="project-footer">
@@ -48,7 +50,7 @@
                 </div>
                 </a>
             </div>
-            <div class="project-card">
+            <div class="project-card fade-in">
                 <a href="machineJDG.html">
                 <img src="images/machine2023_deux_robot.jpg" alt="MachinesJDG">
                 <div class="project-footer">
@@ -56,7 +58,7 @@
                 </div>
                 </a>
             </div>
-            <div class="project-card">
+            <div class="project-card fade-in">
                 <a href="machine2023.html">
                 <img src="images/machine2023_deux_robot.jpg" alt="machine2023">
                 <div class="project-footer">
@@ -64,7 +66,7 @@
                 </div>
                 </a>
             </div>
-            <div class="project-card">
+            <div class="project-card fade-in">
                 <a href="imprimantecorexy.html">
                 <img src="images/corexy_print_closeup.png" alt="imprimantecorexy">
                 <div class="project-footer">
@@ -80,6 +82,15 @@
     <footer>
         <p>Contactez-moi à <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
     </footer>
+
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
 
 </body>
 
