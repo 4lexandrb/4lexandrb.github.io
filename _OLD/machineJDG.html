@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machines Jeux de Génie</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+
+
+    <main>
+        
+        <p>En construction...</p>
+        <h1>Sommaire Machine 2025 - 1ère position 🏆</h1>
+
+        <h1>Sommaire Machine 2024 - 1ère position 🏆</h1>
+        <h3>Défi à battre :</h3>
+        <p>Le défi était de prendre les balles d'un coté du terrain et de les acheminées dans des tuyaux de hauteur différentes un peu éparpillées. Les 30 premières secondes étaient autonomes et des points suplémentaires étaient accordées si l'entièreté de la solution robotique montait sur la plateforme centrale a la fin du temps.</p>
+        <h3>Notre solution :</h3>
+        <p>Notre solution robotique comprenait 2 robots optimisés. Un robot autonome s'occupait d'aspirer les balles et le 2ème allait placer l'autre bout du tuyau dans le trou de tuyau voulu.</p>
+        Robot autonome:
+        <ul>
+            <li>Un suiveur de mur pour que le robot fasse des aller-retours</li>
+            <li>L,entrée de l'aspiration et du tuyau d'aspirateur</li>
+            <li>Un système de préhension de l'autre robot ainsi qu'un système de levage pour monter sur la plateforme</li>
+        </ul>
+        Robot téléopéré:
+        <ul>
+            <li>Un bras 2 axes pour aller porter la fin du tuyau, donc les balles, à la bonne hauteur, verticalement ou horizontalement</li>
+            <li>Des roues Omiwheel omnidirectionelle pour le bon contrôle précis</li>
+            <li>Un bloc de retenu pour s'accrocher au robot autonome</li>
+        </ul>
+
+        <img src="images/Machine2024-3D.png" alt="Machine JDG 2024" style="height: 400px;">
+        <img src="images/machine2024-deployee.jpg" alt="Machine JDG 2024" style="height: 400px;">
+        <video src="videos/machine2024_aspiration.mp4" controls muted height="400px"></video>
+        <video src="videos/machine2024_autonomous.mp4" controls muted height="400px"></video>
+
+        
+
+        <h1><br>Sommaire Machine 2023 - 1ère position 🏆</h1>
+        <h3>Défi à battre :</h3>
+        <p>La prémisse du défi était de joindre les îles inondées par des ponts et connecter des fils d'une à l'autre pour rétablir le courant.</p>
+        <h3>Notre solution :</h3>
+        <p>Notre solution robotique comprenait 2 robots identiques munis de 3 sous-systèmes.</p>
+        <ul>
+            <li>Un système de propulsion adaptatif. Dans une configuration, le robot est muni de 4 roues Mecanum omnidirectionnelles. Dans l'autre, des rouleaux permettent d'avancer sur les ponts.</li>
+            <li>Un bras à 2 axes pour prendre et déposer les ponts. Ce bras à 4 barres est muni d'une pince optimisée.</li>
+            <li>Un système de ramassage et de connexion de fils électriques. Ce système permettait d'emmagasiner 1 fil banane et le plaçait prêt pour être connecté dans les îles.</li>
+        </ul>
+        <img src="images/machine2023_deux_robot.jpg" alt="Machine JDG 2023" style="height: 250px;">
+        <img src="images/machine2023_bras.jpg" alt="Machine JDG 2023" style="height: 250px;">
+        <br>
+        <video src="videos/MachineJDG2023_prisePont.mp4" controls muted height="250px"></video>
+        <video src="videos/MachineJDG2023_priseFil.mp4" controls muted height="250px"></video>
+    </main>
+
+
+    <footer>
+        <p>Contactez-moi à <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
+    </footer>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>

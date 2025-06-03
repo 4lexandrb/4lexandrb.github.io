@@ -1,185 +1,388 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rover</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <title>Engineering Competitions - Alexandre Baril</title>
+    <link rel="stylesheet" href="css/modern_css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css">
 
+</head>
 <body>
-    <div id="header-placeholder"></div>
+    <header class="project-header">
+        <div class="back-nav">
+            <a href="javascript:history.back()" class="back-btn">
+                ← Back to Home
+            </a>
+        </div>
+        <div class="container">
+            <div class="project-hero">
+                <h1 class="project-title">Rover Competition</h1>
+                <p class="project-subtitle">
+                    Project Director for Team Rovus, managing rover development and leading mechanical design efforts for Mars rover competitions.
+                </p>
+            </div>
+        </div>
+    </header>
 
     <main>
-        <h2>Rover, véhicule téléopéré simulant un rover martien</h2>
-        <p>Le Rover est un robot téléopéré conçu pour simuler un rover martien. Il est équipé de plusieurs capteurs et
-            d'une caméra pour permettre aux opérateurs de le contrôler à distance.</p>
-        <p>Caractéristiques:</p>
-        <ul>
-            <li>Châssis en carbon</li>
-            <li>4 roues motrices</li>
-            <li>Bras 5 axes</li>
-            <li>Module Science</li>
-            <li>Masse totale de moins de 50kg</li>
-        </ul>
-        <p>Le Rover a été conçu par l'équipe de Robotique UdeS pour participer à la compétition University Rover
-            Challenge ainsi que la Canadian International Rover Competition.</p>
-        <video src="videos/Rover_conduite_CRQRC.mp4" controls muted height="250px"></video>
+        <!-- Section Description -->
+        <section class="description-section">
+            <div class="container">
+                <div class="description-content">
+                    <h2 class="section-title">Project Description</h2>
+                    <p class="description-text">
+                        As Project Director for Team Rovus (Robotique UdeS), I manage our Mars rover development for the Canadian International Rover Challenge. My responsibilities include overseeing the mechanical team, designing and iterating on robotic arm systems, and working on materials selection for our rocker-bogie suspension and wheel designs. I also contribute hands-on to electrical work, including PCB assembly and circuit debugging, ensuring all systems integrate properly for competition.
+                    </p>
+                    <p class="description-text">
+                        Over the past few years with Team Rovus, I've balanced project management with technical work. We placed 5th at CIRC in 2023 and 2024, and achieved 1st place in 2024 and 3rd place in 2025 at CRQRC. The project involves coordinating between mechanical, electrical, and software teams while personally contributing to design work and troubleshooting. It's been a good learning experience in both technical skills and team leadership. 
+                    </p>
+                </div>
+            </div>
+        </section>
 
+        <!-- Section Points Clés -->
+        <section class="key-points-section">
+            <div class="container">
+                <h2 class="section-title">Key Points</h2>
+                <div class="points-grid">
+                    <div class="point-card">
+                        <div class="point-icon">📊</div>
+                        <h3 class="point-title">Project Management</h3>
+                        <p class="point-description">
+                            Directed Team Rovus through multiple competition cycles, coordinating between different engineering teams and managing project timelines. Results include 5th place at CIRC (2023 & 2024) and podium finishes at CRQRC (1st in 2024, 3rd in 2025).
+                        </p>
+                    </div>
+                    
+                    <div class="point-card">
+                        <div class="point-icon">🦾</div>
+                        <h3 class="point-title">Robotic Arm Development</h3>
+                        <p class="point-description">
+                            Designed and built multiple iterations of robotic arms for the rover, focusing on weight, precision and overall cost. Worked on joint mechanisms, actuator and gearbox selection, and control integration to meet tasks requirements.
+                        </p>
+                    </div>
+                    
+                    <div class="point-card">
+                        <div class="point-icon">⚡</div>
+                        <h3 class="point-title">Mechanical & Electrical Work</h3>
+                        <p class="point-description">
+                            Led the mechanical team while also working on electrical systems. Contributed to rocker-bogie design, wheel material selection, PCB assembly, and circuit debugging. Gained experience bridging mechanical and electrical engineering aspects of the project.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>Mon rôle:</h2>
-        <ul>
-            <li>Co-Direction avec <a href="pmichaud29.github.io">Philippe Michaud</a></li>
-            <li>Conception et fabrication du bras</li>
-            <li>Conception du chassîs et de la suspension</li>
-            <li>Programmation et schéma électrique du module science</li>
-            <li>Conception et fabrication de pièces diverses</li>
-        </ul>
-        <h3>Co-Direction</h3>
-        <p>En tant que co-directeur du projet, j'ai eu la responsabilité de coordonner les différentes équipes de
-            travail. J'ai également été en charge de la planification des tâches et de l'organisation des membres. Mon
-            rôle principal au début de mon mendat était d'aider les nouveaux membres dans leurs projets, autant dans le
-            remu-méninge que dans le choix des composantes et des mécanismes.</p>
+        <!-- Section Galerie avec GLightbox -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="gallery-grid">
 
-        <h3>Conception et fabrication du bras</h3>
-        <p>Les requis:</p>
-        <ul>
-            <li>Mouvement dans au moins 5 axes</li>
-            <li>Capacité de soulever 10kg</li>
-            <li>Répétabilité de moins de 10mm</li>
-            <li>Le plus léger possible</li>
-        </ul>
-        <video src="videos/Arm_05-19.mp4" controls muted height="250px"></video>
-        <br>
-        <p class="accordion-toggle">Voir plus de détails ↓</p>
-        <div class="accordion-content" id="arm-section" style="display: none;">
-            <h4>Premier joint: Joint linéaire</h4>
-            <p>Ce joint est composé de deux rails linéaires ainsi qu'une tige sans-fin et permet de bouger le bras
-                lattéralement en x. Le but de ce joint est de simplifier les déplacements à chaque joint pour opérer
-                des
-                boutons sur un panneau. Le contrôle des joints 3 et 4 (épaule et coude) est donc faite en 2D, soit
-                sur
-                le plan du panneau en face ainsi que en hauteur. Le déplacement gauche droite linéaire n'a pas
-                besoin
-                d'être calculé dans le contrôle et est entièrement effectué par ce joint. Les rails linéaires
-                permettent
-                une excellente robustesse en torsion au premier joint, tout en permettant un mouvement fluide et
-                précis.
-                Le rail linéaire permet d'avoir une grande précision et répétabilité sans offrir de
-                <em>backlash</em> et
-                sans être <em>backdrivable</em>
-            </p>
+                    <!-- 2025 -->
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/CRQ2025_csa.jpeg" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2025">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/CRQ2025_csa.jpeg">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2025</div>
+                        </div>
+                    </a>
 
-            <h4>Deuxième joint: Rotation de la base</h4>
-            <p>La conception de cet assemblage a été faite avec des roulements à billes réutilisés d'un autre
-                projet. Le
-                petit moteur est capable de produire 18Nm de torque et offre une réduction de 7:1. Le deuxième joint
-                est
-                donc capable de tourner à 2,75 RPM tout en exercant un maximum de 125Nm.</p>
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/CRQ2025_PanneauBouton.jpg" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2025">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/CRQ2025_PanneauBouton.jpg">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2025</div>
+                        </div>
+                    </a>
 
-            <h4>Troisième joint: Épaule</h4>
-            <p>Ce joint a été repensé et refabriqué plusieurs fois en raison de la complexité technique. Au bout du
-                bras
-                de 1.5m, je me suis mis comme requis de pouvoir soulever 10kg plus le poid du bras, donc 15kg au
-                total
-                au maximum. Le premier joint doit donc développer 225Nm de torque plus un facteur de sécurité, donc
-                un
-                peu plus de 250Nm. Le dernier concept relie un moteur DC à brosse de 150W à une boîte d'engrenage à
-                vis
-                sans fin (worm gear) avec un ratio de 40:1. En sortie, le <em>gearbox</em> est capable d'appliquer
-                260Nm
-                de torque à 3 RPM. </p>
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/CRQ2025_Roule.mp4" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2025">
+                        <div class="gallery-image">
+                            <video src="./attachments/Rover/CRQ2025_Roule.mp4">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2025</div>
+                        </div>
+                    </a>
 
-            <h4>Quatrième joint: Coude</h4>
-            <p>Du même ordre d'idée que le troisième joint, ce joint doit pouvoir tourner à 3 RPM et développer
-                150Nm,
-                mais plus souvent. J'ai donc fait la conception d'un joint à vis sans-fin avec des pièces libre
-                marché.
-            </p>
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/rover_neige.jpg" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2025">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/rover_neige.jpg">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2025</div>
+                        </div>
+                    </a>
 
-            <h4>5e et 6e joint: Poignet</h4>
-            <p>Le joint du poignet est un joint différentiel. Ce mécansime permet de déporter un peu le poid des
-                moteurs
-                tout en offrant un maximum de puissance des deux moteurs en même temps en rotation. </p>
-            <img src="images/poignet_Diff.jpg" height="250px" alt="Poignet du bras">
-            <video src="videos/poignet_full_show.mp4" height="250px">Poignet</video>
+                    <!-- 2024 -->
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/circ2024_arrive.jpg" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2024">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/circ2024_arrive.jpg">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2024</div>
+                        </div>
+                    </a>
 
-            <h4>Pince</h4>
-            <p>La pince est un mécanisme à deux doigts. Les doigts sont actionnés par un servomoteur et sont
-                capables de
-                soulever 10kg. Les doigts sont munis de capteurs de force pour permettre une meilleure précision
-                lors de
-                la manipulation d'objets.</p>
-        </div>
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/2024_bras.jpg" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2024">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/2024_bras.jpg">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2024</div>
+                        </div>
+                    </a>
 
-        <h3>Conception du châssis</h3>
-        <p>Le châssis a été refait au complet en 2024. La suspension utilise le principe de <em>rocker</em> et de 4
-            roues suelement. La suspension <em>rocker</em> permet d'avoir une force égale sur les 4 roues peu
-            importe le
-            terrain. J'ai décidé de refaire les rocker cette année afin d'Avoir de la place pour insérer
-            l'électronique
-            le plus proche des moteur de propulsion et sauver du poid. Le châssis sert aussi de boîte électrique et
-            comprend tout le circuit de puissance, de data et l'ordinateur de bord. </p>
-        <img src="images/circ2023_terrain.jpg" height="300px" alt="Rover CIRC2023 Tout terrain">
-        <p>Assurer une bonne traction permet de naviguer tous les terrains ainsi que battre les autres équipes au
-            tir à
-            la corde! </p>
-        <video src="videos/souk_a_corde_poly.mp4" height="300px" controls>Tir à la corde</video>
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/Arm_05-19.mp4" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2024">
+                        <div class="gallery-image">
+                            <video src="./attachments/Rover/Arm_05-19.mp4">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2024</div>
+                        </div>
+                    </a>
 
-        <h3>Programmation et schéma électrique du module science</h3>
-        <p>Le module science est un module qui permet de faire des analyses sur le terrain. Il est équipé de
-            plusieurs
-            capteurs et d'une caméra pour permettre aux opérateurs de faire des analyses à distance. J'ai été en
-            charge
-            de la programmation et du schéma électrique de ce module pour aider l'équipe qui développe la partie
-            mécanique. J'ai programmé la communication CANBus, l'intégration des capteur de fin de course et la
-            programmation des moteurs. </p>
-        <img src="images/schema_elec_science.jpg" height="300px" alt="Module science">
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/poignet_Diff.jpg" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2024">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/poignet_Diff.jpg">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2024</div>
+                        </div>
+                    </a>
 
-        <h3>Conception et fabrication de pièces diverses</h3>
-        <p>En plus de mes tâches principales, j'ai également été en charge de la conception et de la fabrication de
-            plusieurs pièces pour le Rover. J'ai utilisé une imprimante 3D pour fabriquer des pièces en plastique et
-            j'ai utilisé un tour CNC pour fabriquer des pièces en aluminium. Plusieurs de mes réalisations sont les
-            boîtiers protecteurs de chaque circuits imprimés, un support à caméra, support à antennes et plus
-            encore.
-        </p>
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/crq2024.JPG" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2024">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/crq2024.JPG">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2024</div>
+                        </div>
+                    </a>
+
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/crq2024_roule.mp4" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2024">
+                        <div class="gallery-image">
+                            <video src="./attachments/Rover/crq2024_roule.mp4">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2024</div>
+                        </div>
+                    </a>
+
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/Rover_Science_CRQRC.jpg" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2024">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/Rover_Science_CRQRC.jpg">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2024</div>
+                        </div>
+                    </a>
+
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/2024_frm_phil.mp4" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2024">
+                        <div class="gallery-image">
+                            <video src="./attachments/Rover/2024_frm_phil.mp4">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2024</div>
+                        </div>
+                    </a>
+
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/premier_test_propulsion.mp4" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2024">
+                        <div class="gallery-image">
+                            <video src="./attachments/Rover/premier_test_propulsion.mp4">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2024</div>
+                        </div>
+                    </a>
+
+                    <!-- 2023 -->
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/circ2023_terrain.jpg" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2023">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/circ2023_terrain.jpg">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2023</div>
+                        </div>
+                    </a>
+
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/circ2023_pipe.jpeg" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2023">
+                        <div class="gallery-image">
+                            <img src="./attachments/Rover/circ2023_pipe.jpeg">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2023</div>
+                        </div>
+                    </a>
+                    
+                    <a class="gallery-item glightbox" 
+                       href="./attachments/Rover/souk_a_corde_poly.mp4" 
+                       data-gallery="project-gallery"
+                       data-title="Rover 2023">
+                        <div class="gallery-image">
+                            <video src="./attachments/Rover/souk_a_corde_poly.mp4">
+                        </div>
+                        <div class="gallery-caption">
+                            <div class="caption-title">Rover 2023</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Technologies -->
+        <section class="tech-section">
+            <div class="container">
+                <h2 class="section-title">Technologies</h2>
+                <div class="tech-showcase">
+                    <span class="tech-tag">Robotic Arm Design</span>
+                    <span class="tech-tag">PCB Assembly & Debug</span>
+                    <span class="tech-tag">Materials Engineering</span>
+                    <span class="tech-tag">Project Leadership</span>
+                    <span class="tech-tag">Competitive Robotics</span>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>Contactez-moi à <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
+    <footer class="modern-footer">
+        <div class="container">
+            <p>Contactez-moi à <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
+            <p>Robotics Engineering Student • Université de Sherbrooke</p>
+        </div>
     </footer>
 
+    <!-- GLightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+    
     <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-    </script>
-
-</body>
-
-</html>
-
-<script>
-    function toggleSection(sectionId) {
-        var section = document.getElementById(sectionId);
-        var arrow = document.getElementById("arrow");
-
-        if (section.style.display === "none") {
-            section.style.display = "block";
-            arrow.innerHTML = "&#9660;"; // Down arrow
-        } else {
-            section.style.display = "none";
-            arrow.innerHTML = "&#9658;"; // Right arrow
-        }
-    }
-    document.querySelectorAll('.accordion-toggle').forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const content = toggle.nextElementSibling;
-            content.classList.toggle('open');
+        // Initialisation de GLightbox
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true,
+            plyr: {
+                config: {
+                    ratio: '16:9',
+                    youtube: {
+                        noCookie: true,
+                        rel: 0,
+                        showinfo: 0,
+                        iv_load_policy: 3
+                    },
+                    vimeo: {
+                        byline: false,
+                        portrait: false,
+                        title: false,
+                        speed: true,
+                        transparent: false
+                    }
+                }
+            },
+            skin: 'clean',
+            cssEfects: {
+                fade: { in: 'fadeIn', out: 'fadeOut' },
+                zoom: { in: 'zoomIn', out: 'zoomOut' },
+                slide: { in: 'slideInRight', out: 'slideOutLeft' },
+                slideBack: { in: 'slideInLeft', out: 'slideOutRight' }
+            },
+            openEffect: 'zoom',
+            closeEffect: 'zoom'
         });
-    });
 
-</script>
+        // Smooth scroll pour la navigation
+        document.querySelector('.back-btn').addEventListener('click', (e) => {
+            if (document.referrer.includes('Tryout_Modern.html') || document.referrer.includes('index.html')) {
+                e.preventDefault();
+                window.location.href = document.referrer;
+            }
+        });
+
+        // Animation d'apparition au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer les éléments à animer
+        document.querySelectorAll('.point-card, .gallery-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+
+        // Animation de survol améliorée
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const img = item.querySelector('img');
+                if (img) {
+                    img.style.transform = 'scale(1.05)';
+                }
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                const img = item.querySelector('img');
+                if (img) {
+                    img.style.transform = 'scale(1)';
+                }
+            });
+        });
+    </script>
+</body>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title – Alexandre Baril</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+</head>
+
+
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="project-header">
+        <h1>Project Title</h1>
+        <p>Brief overview of the project: what it is, the goal, and the context in which it was developed.</p>
+    </section>
+
+    <main>
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>Explain what this project is about. Include context (club, course, competition), your role, and any major
+                achievements. Keep this concise but meaningful.</p>
+
+            <h2>Technical Highlights</h2>
+            <ul>
+                <li>Key constraint 1 or design decision</li>
+                <li>Tool or technology used (ex: Fusion 360, Teensy, etc.)</li>
+                <li>Short bullet point about an innovation or solution</li>
+                <li>Tested in what context (prototype, real-world, simulation...)</li>
+            </ul>
+
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <a href="./attachments/Competitions/cci2023_robot_map.jpg" class="glightbox"
+                    data-gallery="project-gallery">
+                    <img src="./attachments/Competitions/cci2023_robot_map.jpg" alt="image 1">
+                </a>
+                <a href="./attachments/Machine/grower_3d.png" class="glightbox" data-gallery="project-gallery">
+                    <img src="./attachments/Machine/grower_3d.png" alt="image 2">
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Contact me at <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
+    </footer>
+
+    <script>
+        fetch('../header.html')
+            .then(r => r.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        const lightbox = GLightbox({
+            selector: '.glightbox'
+        });
+    </script>
+</body>
+
+</html>

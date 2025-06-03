@@ -1,70 +1,342 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Alexandre Baril - Ingénieur Robotique</title>
+    <link rel="stylesheet" href="css/modern_css.css">
 </head>
-
-
 <body>
-
-    <div id="header-placeholder"></div>
+    <header class="modern-header">
+        <div class="hero-content">
+            <h1 class="hero-title">Alexandre Baril</h1>
+            <p class="hero-subtitle">Ingénieur Robotique • Université de Sherbrooke</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="12">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="11">0</span>
+                    <span class="stat-label">Competitions won</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-label">Years of experience</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="modern-nav">
+            <ul>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="./pdf/CV-AlexandreBaril.pdf" class="nav-link" style="color: #fff;">CV FR</a>
+                    <span style="color: #fff; margin: 0 4px;">|</span>
+                    <a href="./pdf/CV-AlexandreBaril_EN.pdf" class="nav-link" style="color: #fff;">CV EN</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <div class="project-grid">
-            <div class="project-card fade-in">
-                <a href="rover.html">
-                    <img src="images/Rover_Science_CRQRC.jpg" alt="Rover">
-                    <div class="project-footer">
-                        <h3>Rover</h3>
-                    </div>
-                </a>
+        <!-- Filtres de projets -->
+        <section class="filters-section">
+            <div class="container">
+                <h2>Mes Projets</h2>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="robotique">Robotique</button>
+                    <button class="filter-btn" data-filter="competition">Compétitions</button>
+                    <button class="filter-btn" data-filter="personnel">Personnel</button>
+                    <button class="filter-btn" data-filter="impression">Impression 3D</button>
+                </div>
             </div>
-            <div class="project-card fade-in">
-                <a href="machineJDG.html">
-                    <img src="images/machine2023_deux_robot.jpg" alt="MachinesJDG">
-                    <div class="project-footer">
-                        <h3>Jeux de Génie - Machine</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="project-card fade-in">
-                <a href="machine2023.html">
-                    <img src="images/machine2023_deux_robot.jpg" alt="machine2023">
-                    <div class="project-footer">
-                        <h3>Compétitions d'ingénierie</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="project-card fade-in">
-                <a href="imprimantecorexy.html">
-                    <img src="images/corexy_print_closeup.png" alt="imprimantecorexy">
-                    <div class="project-footer">
-                        <h3>Imprimante 3D CoreXY</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
+        </section>
 
-        </div>
+        <!-- Grille de projets -->
+        <section class="projects-grid" id="projects">
+            <div class="container">
+                <!-- Projet Rover -->
+                <div class="project-card featured" data-category="robotique">
+                    <div class="card-image">
+                        <img src="./attachments/Rover/circ2024_pipe.jpg" alt="Rover Tout-Terrain">
+                        <div class="card-overlay">
+                            <div class="card-tags">
+                                <span class="tag">All-terrain</span>
+                                <span class="tag">5 DOF Arm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>All-Terrain rover w/ robotic arm</h3>
+                        <p>Project Director for Team Rovus, managing rover development and leading mechanical design efforts for Mars rover competitions</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Mechanical Design</span>
+                            <span class="tech-tag">PCBs</span>
+                            <span class="tech-tag">Team management</span>
+                        </div>
+                        <a href="rover.html" class="card-link">See project →</a>
+                    </div>
+                </div>
+
+                <!-- Machine JDG 2024 -->
+                <div class="project-card" data-category="competition">
+                    <div class="card-image">
+                        <div class="card-overlay">
+                            <div class="card-tags">
+                                <span class="tag winner">🏆 1ère place</span>
+                                <span class="tag">Competition</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Machine JDG 2024</h3>
+                        <p>Deux robots collaboratifs pour un défi de manutention complexe avec système d'aspiration innovant.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Vision</span>
+                            <span class="tech-tag">Collaboration</span>
+                        </div>
+                        <a href="#" class="card-link">See project →</a>
+                    </div>
+                </div>
+
+                <!-- Machine JDG 2024 -->
+                <div class="project-card" data-category="competition">
+                    <div class="card-image">
+                        <img src="./attachments/competitions/cqi2025_pose.jpeg" alt="Canadian Engineering Competitions">
+                        <div class="card-overlay">
+                            <div class="card-tags">
+                                <span class="tag winner">🏆 1st place</span>
+                                <span class="tag">Competition</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Canadian Engineering Competitions</h3>
+                        <p>3 years competing in Senior Design at the Canadian Engineering Competitions</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Rapid Design</span>
+                            <span class="tech-tag">Electronics</span>
+                            <span class="tech-tag">Collaboration</span>
+                        </div>
+                        <a href="./Canadian Engineering Competitions.html" class="card-link">See project →</a>
+                    </div>
+                </div>
+
+                <!-- Imprimante CoreXY -->
+                <div class="project-card" data-category="personnel impression">
+                    <div class="card-image">
+                        <div class="card-overlay">
+                            <div class="card-tags">
+                                <span class="tag">Personnel</span>
+                                <span class="tag">Fabrication</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Imprimante CoreXY</h3>
+                        <p>Développement personnalisé d'une imprimante 3D haute précision avec contrôle WiFi et Klipper.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">CoreXY</span>
+                            <span class="tech-tag">Klipper</span>
+                            <span class="tech-tag">CAD</span>
+                        </div>
+                        <a href="#" class="card-link" onclick="alert('Imprimante CoreXY - Projet personnel')">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- Machine JDG 2023 -->
+                <div class="project-card" data-category="competition">
+                    <div class="card-image">
+                        <div class="card-overlay">
+                            <div class="card-tags">
+                                <span class="tag winner">🏆 1ère place</span>
+                                <span class="tag">Competition</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Machine JDG 2023</h3>
+                        <p>Robots collaboratifs pour connecter des îles avec bras articulé et système de propulsion adaptatif.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Mecanum</span>
+                            <span class="tech-tag">Bras robotisé</span>
+                            <span class="tech-tag">Électronique</span>
+                        </div>
+                        <a href="#" class="card-link" onclick="alert('Machine JDG 2023 - Autre projet gagnant!')">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- Projet bonus -->
+                <div class="project-card" data-category="robotique personnel">
+                    <div class="card-image">
+                        <div class="card-overlay">
+                            <div class="card-tags">
+                                <span class="tag">Innovation</span>
+                                <span class="tag">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Système Domotique</h3>
+                        <p>Intégration de capteurs intelligents et automatisation complète pour environnement connecté.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">WiFi</span>
+                        </div>
+                        <a href="#" class="card-link" onclick="alert('Système Domotique - En développement')">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- Projet bonus 2 -->
+                <div class="project-card" data-category="impression personnel">
+                    <div class="card-image">
+                        <div class="card-overlay">
+                            <div class="card-tags">
+                                <span class="tag">Prototype</span>
+                                <span class="tag">Mécanique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pièces Mécaniques Custom</h3>
+                        <p>Conception et fabrication de composants sur mesure pour diverses applications industrielles.</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">CAD</span>
+                            <span class="tech-tag">Impression 3D</span>
+                            <span class="tech-tag">Prototypage</span>
+                        </div>
+                        <a href="#" class="card-link" onclick="alert('Pièces Custom - Collection de prototypes')">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About</h2>
+                        <p>Robotics Engineering student at Université de Sherbrooke, focusing on mechanical design and system integration. Project Director for Team Rovus, competing in Mars rover challenges across Canada.</p>
+                        <p>Experience spanning robotic arm development, rover mobility systems, electronic integration, and embedded programming. Comfortable working across mechanical, electrical, and software domains in competitive robotics environments.</p>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <h4>Design & Manufacturing</h4>
+                                <p>OnShape, SolidWorks, Additive manufacturing, Prototyping and iterative design, Materials selection</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Programmin & Controlg</h4>
+                                <p>C/C++, Python, ROS/ROS2, Arduino programming, Embedded systems</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Electronics & Integration</h4>
+                                <p>Microcontrollers, PCB design and soldering, High power systems, Circuit debugging</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>Contactez-moi à <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
+    <footer class="modern-footer" id="contact">
+        <div class="container">
+            <p>Contact : <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
+            <p>Robotics Engineering Student • Université de Sherbrooke</p>
+        </div>
     </footer>
 
     <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
+        // Dropdown toggle for mobile/touch devices
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('cvDropdownToggle');
+            const content = document.getElementById('cvDropdownContent');
+            if (toggle && content) {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    content.classList.toggle('show');
+                });
+                // Optional: close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!toggle.contains(event.target) && !content.contains(event.target)) {
+                        content.classList.remove('show');
+                    }
+                });
+            }
+        });
+        // Animation des statistiques
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = Math.floor(current);
+                }, 16);
             });
+        }
+
+        // Filtres de projets
+        function initFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Mise à jour des boutons actifs
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    // Filtrage des projets
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeInUp 0.5s ease forwards';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        // Navigation smooth scroll
+        function initSmoothScroll() {
+            const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(animateCounters, 500);
+            initFilters();
+            initSmoothScroll();
+        });
     </script>
-
-
 </body>
-
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <h2 style="text-align: center; margin-top: 1em;">Projets phares</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <a href="rover.html">
+                    <img src="images/rover_card.jpg" alt="Rover">
+                    <div class="desc">
+                        <h3>Rover</h3>
+                        <p>Sous-systèmes robotisés conçus pour un environnement tout-terrain</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="machine2024.html">
+                    <img src="images/machine2024_card.jpg" alt="Machine 2024">
+                    <div class="desc">
+                        <h3>Machine JDG 2024</h3>
+                        <p>Deux robots collaboratifs pour un défi de manutention complexe</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="imprimantecorexy.html">
+                    <img src="images/imprimante_card.jpg" alt="Imprimante CoreXY">
+                    <div class="desc">
+                        <h3>Imprimante CoreXY</h3>
+                        <p>Développement personnalisé d'une imprimante 3D haute précision</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="competitions.html">
+                    <img src="images/competitions_card.jpg" alt="Compétitions">
+                    <div class="desc">
+                        <h3>Compétitions</h3>
+                        <p>Participation à diverses compétitions de robotique et d’ingénierie</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="archive-link">
+            <a href="archive.html">→ Voir tous les projets (archives)</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contactez-moi à <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
+    </footer>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+
+</body>
+
+</html>

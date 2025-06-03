@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Archive – Alexandre Baril</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="archive-header">
+    <h1>Project Archive</h1>
+    <p>Here you'll find all of my additional projects – prototypes, technical exercises, and other explorations.</p>
+  </section>
+
+  <main>
+    <div class="archive-grid">
+      <div class="archive-card">
+        <a href="machine2023.html">
+          <img src="images/machine2023_card.jpg" alt="Machine 2023">
+          <div class="desc">
+            <h3>Machine JDG 2023</h3>
+            <p>First version of the game-playing robot with multi-stage automation.</p>
+          </div>
+        </a>
+      </div>
+      <div class="archive-card">
+        <a href="machineJDG.html">
+          <img src="images/machinejdg_card.jpg" alt="Machine JDG">
+          <div class="desc">
+            <h3>JDG Mechanisms</h3>
+            <p>Exploration of complex timing mechanisms for game interaction.</p>
+          </div>
+        </a>
+      </div>
+      <div class="archive-card">
+        <a href="FREN%20test">
+          <img src="images/test_card.jpg" alt="Test">
+          <div class="desc">
+            <h3>Test Bench</h3>
+            <p>Early testing setup and calibration system for motion control.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Add more archived projects as needed -->
+    </div>
+  </main>
+
+  <footer>
+    <p style="text-align:center">Contact me at <a href="mailto:bara1102@usherbrooke.ca">bara1102@usherbrooke.ca</a></p>
+  </footer>
+
+  <script>
+    fetch('header.html')
+      .then(r => r.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+  </script>
+</body>
+</html>
